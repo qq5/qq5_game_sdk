@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/qq5_white_100"
+        android:orientation="vertical"
+        android:paddingBottom="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/qq5_green"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/qq5_pay_center"
+                android:textColor="@color/qq5_white_98"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/qq5_dialog_close"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/qq5_dialog_close"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="6dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                android:id="@+id/qq5_goods_detail"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:paddingBottom="2dp"/>
+
+            <TextView
+                android:id="@+id/qq5_goods_account"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:paddingTop="2dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/qq5_white_86" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:paddingLeft="32dp"
+            android:text="@string/qq5_pay_type"
+            android:textColor="@color/qq5_white_54"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="horizontal"
+            android:paddingLeft="28dp"
+            android:paddingRight="32dp">
+
+            <com.qq5sdk.base.HorizontalListView
+                android:id="@+id/qq5_pay_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true">
+            </com.qq5sdk.base.HorizontalListView>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/qq5_pay_button"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@color/qq5_green"
+            android:gravity="center"
+            android:text="@string/qq5_pay_button"
+            android:textColor="@color/qq5_white_98"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/qq5_pay_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="right"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="@string/qq5_pay_question"
+            android:textColor="@color/qq5_green"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>

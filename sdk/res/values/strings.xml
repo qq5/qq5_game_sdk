@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">QQ5游戏</string>
+
+    <string name="qq5_pay_center">QQ5充值中心</string>
+    <string name="qq5_goods_detail">商品详情：</string>
+    <string name="qq5_goods_price">充值金额：</string>
+    <string name="qq5_pay_type">支付方式：</string>
+    <string name="qq5_pay_button">立即支付</string>
+    <string name="qq5_pay_question">支付常见问题</string>
+</resources>

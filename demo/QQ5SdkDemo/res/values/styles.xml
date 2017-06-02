@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="qq5_style_float_popup_right_anim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/qq5_float_popup_in_right</item>
+        <item name="android:windowExitAnimation">@anim/qq5_float_popup_out_right</item>
+    </style>
+
+    <style name="qq5_style_float_popup_left_anim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/qq5_float_popup_in_left</item>
+        <item name="android:windowExitAnimation">@anim/qq5_float_popup_out_left</item>
+    </style>
+
+    <style name="qq5Toast">
+        <item name="android:windowEnterAnimation">@anim/qq5_toast_enter</item>
+        <item name="android:windowExitAnimation">@anim/qq5_toast_exit</item>
+    </style>
+
+    <style name="qq5_base_dialog_style" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/qq5_transparent</item>
+        <item name="android:background">@color/qq5_transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="qq5_no_bg_style" parent="qq5_base_dialog_style">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="qq5_transparent">#00000000</color>
+
+    <color name="qq5_white_100">#FAFAFA</color><!--背景对比色-->
+    <color name="qq5_white_98">#FAFAFA</color><!--背景对比色-->
+    <color name="qq5_white_96">#F5F5F5</color><!--背景对比色-->
+    <color name="qq5_white_94">#F0F0F0</color><!-- 分割线颜色-->
+    <color name="qq5_white_90">#E6E6E6</color><!-- 分割线颜色-->
+    <color name="qq5_white_86">#dcdcdc</color><!-- 分割线颜色-->
+    <color name="qq5_white_80">#c8c8c8</color><!-- 分割线颜色-->
+    <color name="qq5_white_74">#b5b5b5</color><!-- 文字浅色-->
+    <color name="qq5_white_54">#8a8a8a</color><!-- 文字浅色-->
+    <color name="qq5_white_46">#757575</color><!--文字颜色-->
+    <color name="qq5_white_30">#464646</color><!--标题文字颜色深色-->
+    <color name="qq5_white_0">#000000</color><!--纯黑色-->
+
+    <color name="qq5_green">#40BB6A</color>
+    <color name="qq5_green_dark">#228B22</color>
+    <color name="qq5_orange">#FF8230</color>
+    <color name="qq5_orange_dark">#ff7b19</color>
+    <color name="qq5_grey">#efeff4</color>
+</resources>

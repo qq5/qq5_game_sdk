@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/qq5_pay_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:id="@+id/qq5_pay_type"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="4dp"/>
+
+        <ImageView
+            android:id="@+id/qq5_pay_select"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/qq5_icon_selected"
+            android:layout_gravity="bottom|right"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/qq5_pay_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qq5_pay_layout"
+        android:layout_centerInParent="true"
+        android:textSize="14sp"
+        android:paddingLeft="10dp"
+        android:text="支付宝"
+        />
+</RelativeLayout>
