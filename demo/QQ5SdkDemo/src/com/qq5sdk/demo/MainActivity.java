@@ -224,11 +224,11 @@ public class MainActivity extends Activity {
          * 拉起支付界面，注册支付回调监听器。
          *
          * @param activity 当前游戏的Activity
-         * @param gameOrderId 服务器id
-         * @param gameCoin 服务器名称
-         * @param gameCoinName 游戏角色id
-         * @param amount 游戏角色名称
-         * @param extra 游戏角色等级
+         * @param gameOrderId 游戏订单id
+         * @param gameCoin 游戏币数量(1)
+         * @param gameCoinName 游戏币名称（元宝）
+         * @param amount 充值金额须大于0.1，支持一位小数（单位：元）
+         * @param extra 透传字段（SDK服务端回调原样返回）
          * @param payCallBack 支付回调接口
          */
         QQ5Sdk.getInstance().onPay(this, "12412412", "50000", "刀币", amount, "", new PayCallBack() {
