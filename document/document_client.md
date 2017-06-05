@@ -291,7 +291,7 @@ roleLevel|java.lang.String|游戏角色等级|是
      *
      * @param activity 当前游戏的Activity
      * @param gameOrderId 游戏订单id
-     * @param gameCoin 游戏币名称（元宝）
+     * @param gameCoin 游戏币数量(1)
      * @param gameCoinName 游戏币名称（元宝）
      * @param amount 充值金额须大于0.1，支持一位小数（单位：元）
      * @param extra 透传字段（SDK服务端回调原样返回）
