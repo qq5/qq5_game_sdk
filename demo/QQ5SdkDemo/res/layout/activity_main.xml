@@ -22,6 +22,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="是否开启闪屏"/>
+            
             <Button
                 android:id="@+id/login_button"
                 android:layout_marginTop="10dp"

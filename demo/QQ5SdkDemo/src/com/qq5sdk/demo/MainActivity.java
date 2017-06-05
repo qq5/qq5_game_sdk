@@ -12,7 +12,9 @@ import com.qq5sdk.api.SwitchAccountCallBack;
 import com.qq5sdk.api.UpdateLevelCallBack;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Build;
@@ -21,6 +23,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +43,7 @@ public class MainActivity extends Activity {
     private Button mUpdateLevelBtn;
     private Button mSwitchAccountBtn;
     private Button mPayBtn;
+    private CheckBox mCheckBox;
 
     private boolean mIsPortrait = true;
     
@@ -53,22 +58,50 @@ public class MainActivity extends Activity {
         mUpdateLevelBtn = (Button) findViewById(R.id.update_level_button);
         mSwitchAccountBtn = (Button) findViewById(R.id.switch_account_button);
         mPayBtn = (Button) findViewById(R.id.pay_button);
+        mCheckBox = (CheckBox) findViewById(R.id.checkbox);
 
+        mCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                SharedPreferences activityPreferences = getSharedPreferences(
+                        "sdk_demo", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = activityPreferences.edit();
+                editor.putBoolean("splash_visibility", isChecked);
+                editor.commit();
+            }
+        });
+
+        SharedPreferences setPreferences = getSharedPreferences(
+                "sdk_demo", Context.MODE_PRIVATE);
+        Boolean result = setPreferences.getBoolean("splash_visibility", true);
+
+        mCheckBox.setChecked(result);
+        
         /*
          *初始化接口
          * @param activity   当前游戏的Activity
          * @param orientation    横屏 HORIZONTAL 竖屏 VERTICAL
-         * @param appId    在QQ5游戏中心申请的appid, 1 是测试appId
-         * @param appKey   在QQ5游戏中心申请的appkey, H0ndi0tBTq 是appKey
+         * @param appId    在QQ5游戏中心申请的appid
+         * @param appKey   在QQ5游戏中心申请的appkey
+         * @param splashVisibility 是否启动闪屏 true or false
          * @param splashDismissCallBack  初始化完毕回调接口
          */
-        QQ5Sdk.getInstance().init(MainActivity.this, QQ5Sdk.HORIZONTAL, "1", "H0ndi0tBTq", new SplashDismissCallBack() {
+        QQ5Sdk.getInstance().init(MainActivity.this, QQ5Sdk.HORIZONTAL, "1", "H0ndi0tBTq", result, new SplashDismissCallBack() {
             @Override
             public void onDismiss() {
-                setText("Splash 页面结束回调。 AppId = " + QQ5Sdk.getInstance().getAppId() + "AppKey = " + QQ5Sdk.getInstance().getAppKey());
+                setText("初始化回调成功。 AppId = " + QQ5Sdk.getInstance().getAppId() + "AppKey = " + QQ5Sdk.getInstance().getAppKey());
                 //方法将在初始化完毕时调用
             }
         });
+        
+        //init 方法重载，不传splashVisibility 默认开启闪屏
+        //QQ5Sdk.getInstance().init(MainActivity.this, QQ5Sdk.VERTICAL, "1", "H0ndi0tBTq", new SplashDismissCallBack() {
+        //  @Override
+        //  public void onDismiss() {
+        //      setText("初始化回调成功");
+        //      //方法将在初始化完毕时调用
+        //  }
+        //});
 
         
       //打开调试模式，方便查看log
@@ -219,6 +252,7 @@ public class MainActivity extends Activity {
             Toast.makeText(this, "请输入金额", Toast.LENGTH_SHORT).show();
             return;
         }
+        
         /*
          * 支付接口
          * 拉起支付界面，注册支付回调监听器。

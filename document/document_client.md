@@ -7,6 +7,7 @@ Android接入文档
 :---:|:---:|:---:|:---:
 1.0.0	|Feng Jibo <br>Zhu Dongya|初始版本|2017/5/2
 1.0.1	|Feng Jibo <br>Zhu Dongya|文档完善|2017/5/25
+1.0.6 |Feng Jibo <br>Zhu Dongya|新增可控制闪屏功能|2017/6/5
 
 # 目录
 
@@ -125,12 +126,14 @@ D.拷贝res目录下所有文件夹到游戏工程里面，注意命名是否重
 
 初始化方法 init() 定义在 QQ5SDK.java 中，请在 QQ5SDK.getInstance() 后即可调用。
 
+此方法具有两个重载方法，请根据需求自行选择。
+
 **在启动游戏时调用，必须先调用初始化接口才能调用其他接口。**
 
 调用示例：
 ```java
     /**
-     * 初始化接口 (必接)
+     * 初始化接口, 默认开启qq5闪屏
      *
      * @param activity   当前游戏的Activity
      * @param orientation    横屏 HORIZONTAL 竖屏 VERTICAL
@@ -145,6 +148,24 @@ D.拷贝res目录下所有文件夹到游戏工程里面，注意命名是否重
          }
      });
 
+
+     /**
+      * 初始化接口
+      *
+      * @param activity   当前游戏的Activity
+      * @param orientation    横屏 HORIZONTAL 竖屏 VERTICAL
+      * @param appId    在QQ5游戏中心申请的appid
+      * @param appKey   在QQ5游戏中心申请的appkey
+      * @param splashVisibility 是否启动闪屏 true or false
+      * @param splashDismissCallBack  初始化完毕回调接口
+      */
+      QQ5Sdk.getInstance().init(activity, orientation, appId, appKey, false, new SplashDismissCallBack() {
+          @Override
+          public void onDismiss() {
+               //方法将在初始化完毕时调用
+          }
+      });
+
 ```
 
 参数表：
@@ -155,6 +176,7 @@ activity|android.app.Activity|当前游戏的Activity|是
 orientation|int|请填写 QQ5Sdk.HORIZONTAL 或 QQ5Sdk.VERTICAL|是
 appId|String|在QQ5游戏中心申请的appid|是
 appKey|String|在QQ5游戏中心申请的appkey|是
+splashVisibility|boolean|是否开启闪屏|是
 splashDismissCallBack|com.qq5sdk.api.SplashDismissCallBack|初始化完毕回调接口|是
 
 
