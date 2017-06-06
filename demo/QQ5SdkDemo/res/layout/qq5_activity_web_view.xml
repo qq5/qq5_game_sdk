@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/qq5_green">
+
+        <ImageView
+            android:id="@+id/qq5_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/qq5_arrow_back"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/qq5_web_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/qq5_back"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:textColor="@color/qq5_white_100"
+            android:paddingLeft="12dp"
+            android:layout_marginRight="12dp"/>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/qq5_user_header" />
+
+    <WebView
+        android:id="@+id/qq5_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/qq5_grey"
+        android:scrollbars="none"/>
+</LinearLayout>
