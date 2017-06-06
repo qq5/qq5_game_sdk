@@ -33,6 +33,7 @@
         android:layout_below="@+id/qq5_pay_layout"
         android:layout_centerInParent="true"
         android:textSize="14sp"
+        android:textColor="@color/qq5_white_54"
         android:paddingLeft="10dp"
         android:text="支付宝"
         />
