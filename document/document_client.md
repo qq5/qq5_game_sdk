@@ -324,11 +324,14 @@ roleLevel|java.lang.String|游戏角色等级|是
         @Override
         public void success(String message) {
               //支付成功
+              //success --> 支付成功
         }
 
         @Override
         public void failed(String message) {
             //失败，请查看错误详情
+            //process --> 支付中
+            //fail --> 支付失败
         }
 
     });

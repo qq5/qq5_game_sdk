@@ -272,8 +272,8 @@ public class MainActivity extends Activity {
             }
 
             @Override
-            public void success(String orderId) {
-                setText("支付成功！" + orderId);
+            public void success(String message) {
+                setText("支付成功！" + message);
             }
         });
     }
