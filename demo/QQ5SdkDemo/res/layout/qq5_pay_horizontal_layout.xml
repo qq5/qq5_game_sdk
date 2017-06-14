@@ -51,6 +51,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:textSize="14sp"
+                android:textColor="@color/qq5_white_54"
                 android:paddingBottom="2dp"/>
 
             <TextView
@@ -60,6 +61,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:textSize="14sp"
+                android:textColor="@color/qq5_white_54"
                 android:paddingTop="2dp"/>
 
         </LinearLayout>

@@ -8,6 +8,7 @@ Android接入文档
 1.0.0	|Feng Jibo <br>Zhu Dongya|初始版本|2017/5/2
 1.0.1	|Feng Jibo <br>Zhu Dongya|文档完善|2017/5/25
 1.0.6 |Feng Jibo <br>Zhu Dongya|新增可控制闪屏功能|2017/6/5
+1.0.7 |Feng Jibo <br>Zhu Dongya|支付接口更新|2017/6/9
 
 # 目录
 
@@ -332,6 +333,11 @@ roleLevel|java.lang.String|游戏角色等级|是
             //失败，请查看错误详情
             //process --> 支付中
             //fail --> 支付失败
+        }
+
+        @Override
+        public void cancel() {
+          //支付取消，关闭支付界面时的回调
         }
 
     });

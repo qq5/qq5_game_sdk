@@ -265,7 +265,7 @@ public class MainActivity extends Activity {
          * @param extra 透传字段（SDK服务端回调原样返回）
          * @param payCallBack 支付回调接口
          */
-        QQ5Sdk.getInstance().onPay(this, "12412412", "50000", "刀币", amount, "", new PayCallBack() {
+        QQ5Sdk.getInstance().onPay(this, System.currentTimeMillis() + "", "50000", "刀币", amount, "", new PayCallBack() {
             @Override
             public void failed(String message) {
                 setText("支付失败！原因:" + message);
@@ -275,6 +275,11 @@ public class MainActivity extends Activity {
             public void success(String message) {
                 setText("支付成功！" + message);
             }
+
+			@Override
+			public void cancel() {
+				setText("支付取消！");
+			}
         });
     }
 

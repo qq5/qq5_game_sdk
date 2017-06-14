@@ -49,7 +49,8 @@
             android:name="com.qq5sdk.ui.userWeb.UserWebActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:hardwareAccelerated="true"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
             android:windowSoftInputMode="adjustResize" />
         
         <activity
