@@ -72,6 +72,7 @@ B.将 sdk 工程中 Androidmanifest 中 require 标记内容拷贝到
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
