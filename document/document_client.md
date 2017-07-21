@@ -435,7 +435,7 @@ exitCallBack|com.qq5sdk.api.ExitCallBack|返回事件回调|是
 参数名称|类型|备注|是否必填
 :---:|:---:|:---:|:---:
 roleName|java.lang.String|游戏角色名称|是
-roleLevel|java.lang.String|游戏角色id|是
+roleLevel|java.lang.String|游戏角色等级|是
 updateLevelCallBack|com.qq5sdk.api.UpdateLevelCallBack|升级回调接口|是
 
 <h2 id="switchAccount">7.切换账号</h2>
